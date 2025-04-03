@@ -1,0 +1,22 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Vaso de vidrio",
+      "precio": 1200,
+      "stock": 50
+    },
+    {
+      "id": 2,
+      "nombre": "Plato de cerámica",
+      "precio": 2500,
+      "stock": 30
+    },
+    {
+      "id": 3,
+      "nombre": "Tenedor de acero inoxidable",
+      "precio": 800,
+      "stock": 100
+    }
+  ]
+}

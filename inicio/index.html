@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container-padre">
+
+        <div class="container">
+            <h1>Producto:</h1>
+            <p id="producto-nombre"></p>
+            <p id="producto-stock"></p>
+            <p id="producto-precio"></p>
+        </div>
+
+        <div class="container1">
+            <h1>Producto:</h1>
+            <p id="producto-nombre1"></p>
+            <p id="producto-stock1"></p>
+            <p id="producto-precio1"></p>
+        </div>
+
+    </div>
+
+    <script>
+        // Cargar JSON desde la carpeta "data" que está fuera de "pagina"
+        fetch('../data-bases/productos.json')  // Ruta relativa hacia la carpeta padre
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("producto-nombre").innerText = "Nombre: " + data.productos[0].nombre;
+                document.getElementById("producto-stock").innerText = "Stock: " + data.productos[0].stock;
+                document.getElementById("producto-precio").innerText = "Precio: $" + data.productos[0].precio;
+            })
+            .catch(error => console.error('Error al cargar el JSON:', error));
+    </script>
+
+
+
+    <script>
+        // Cargar JSON desde la carpeta "data" que está fuera de "pagina"
+        fetch('../data-bases/productos.json')  // Ruta relativa hacia la carpeta padre
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("producto-nombre1").innerText = "Nombre: " + data.productos[1].nombre;
+                document.getElementById("producto-stock1").innerText = "Stock: " + data.productos[1].stock;
+                document.getElementById("producto-precio1").innerText = "Precio: $" + data.productos[1].precio;
+            })
+            .catch(error => console.error('Error al cargar el JSON:', error));
+    </script>
+
+</body>
+
+</html>
